@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="container">
+            <div class="form">
+                <form action="/upload" method="post">
+                    <div class="file-upload">
+                        <span>Click To Upload Your File</span>
+                        <input type="file" id="fileupload" name="file" onchange="updateLabel(this)">
+                    </div>
+                    <div class="configs">
+                        <div class="config" id="onetime" enabled="off" onclick="configtoggle('onetimeuse')">
+                            <span>One Time Use</span>
+                        </div>
+                        <div class="config" id="directdownload" enabled="off" onclick="configtoggle('directdownload')">
+                            <span>Direct Download</span>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>

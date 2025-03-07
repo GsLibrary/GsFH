@@ -1,0 +1,107 @@
+body {
+    box-sizing: border-box;
+    background-color: #0a0a0a;
+    border: 3px solid red;
+}
+
+.container {
+    box-sizing: border-box;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center; /* Left/Right/Center Aligning */
+    align-items: center; /* Up/Down/Center Aligning */
+}
+
+.form {
+    display: flex; /* Changed from block to flex */
+    flex-direction: column; /* Arrange items in a column */
+    box-sizing: border-box;
+    background-color: #1a1a1a;
+    width: 45%;
+    height: 85%;
+    border: 1px solid black;
+    border-radius: 4%;
+    padding: 4%;
+    justify-content: left; /* Center elements vertically */
+    align-items: center; /* Center elements horizontally */
+}
+
+
+.file-upload {
+    display: inline-flex;
+    position: relative;
+    cursor: pointer;
+    padding: 20px 60px;
+    border: 2px dashed #aaa;
+    border-radius: 8px;
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+    color: #aaa;
+    transition: 0.3s ease-out;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    white-space: nowrap;
+    width: 360px; /* Fixed width of the button */
+    height: 40px; /* Fixed height of the button */
+    /* background-image: url(y.png); */
+    background: linear-gradient(45deg, #1b1b1b, #2a2a2a);
+    background-size: 400% 400%;
+    animation: gradientBG 10s ease infinite;
+}
+
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
+.file-upload:hover {
+    border-color: #bb2222;
+    color: #bb2222;
+}
+
+.file-upload input[type="file"] {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.file-upload span {
+    pointer-events: none;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: calc(1vw + 10px); /* Dynamically adjusts text size, but doesn't cause overflow */
+    text-align: center; /* Ensures the text remains centered */
+    line-height: 1.2; /* Adjusts line height to fit the content */
+    word-wrap: break-word; /* Prevents text overflow */
+}
+
+
+.configs {
+    display: flex;
+    justify-content: center; /* Left/Right/Center Aligning */
+    align-items: center; /* Up/Down/Center Aligning */
+    margin-top: 5%;
+    gap: 1%;
+}
+
+.config {
+    display: inline;
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+    color: #aaa;
+    background-color: #2a2a2a;
+    padding: 10px 30px;
+    border: 1px solid #aaa;
+    border-radius: 8px;
+    cursor: pointer;
+}
