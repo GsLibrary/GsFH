@@ -11,12 +11,12 @@
                         <input type="file" id="fileupload" name="file" onchange="updateLabel(this)">
                     </div>
                     <div class="configs">
-                        <div class="config" id="onetime" enabled="off" onclick="configtoggle('onetimeuse')">
+                        <div class="config" id="onetime" name="onetime" enabled="off" onclick="configtoggle('onetimeuse')">
                             <span>One Time Use</span>
                         </div>
-                        <div class="config" id="directdownload" enabled="off" onclick="configtoggle('directdownload')">
-                            <span>Direct Download</span>
-                        </div>
+                    </div>
+                    <div class="upload-button">
+                        <button type="submit" id="upload" name="upload">Upload</button>
                     </div>
                 </form>
             </div>
